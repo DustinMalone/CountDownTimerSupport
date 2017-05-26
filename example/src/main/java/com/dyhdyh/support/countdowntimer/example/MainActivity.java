@@ -1,5 +1,6 @@
 package com.dyhdyh.support.countdowntimer.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -71,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         mTimer.start();
         tv_state.setText(getStateText());
     }
+
+    public void clickListDownTimer(View v) {
+        startActivity(new Intent(this, DownTimerListActivity.class));
+    }
+
 
     @Override
     protected void onResume() {
